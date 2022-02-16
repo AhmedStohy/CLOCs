@@ -5,7 +5,7 @@ import numba
 import numpy as np
 from numba import cuda
 
-from spconv.utils import non_max_suppression
+from spconv.utils import non_max_suppression_cpu
 
 @cuda.jit('(float32[:], float32[:])', device=True, inline=True)
 def iou_device(a, b):
